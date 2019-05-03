@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p class="header">Un ejemplo de la problematica que resuelve Vuex</p>
+    <nested-parent-a/>
+    <br>
+    <nested-parent-b/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NestedParentA from './components/nestedA/NestedParentA'
+import NestedParentB from './components/nestedB/NestedParentB'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    NestedParentA,
+    NestedParentB
   }
 }
 </script>
@@ -22,7 +25,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
   margin-top: 60px;
+}
+
+.header{
+  font-weight: bold;
+  font-size: 40px;
+  color: black;
 }
 </style>
