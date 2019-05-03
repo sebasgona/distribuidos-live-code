@@ -14,17 +14,17 @@
 
 <script>
 export default {
-    data() {
-        return {
-            counter: 0
-        }
-    },
     methods: {
         increment() {
-            this.counter++;
+            this.$store.commit('increment')
         },
         decrement() {
-            this.counter--;
+            this.$store.commit('decrement')
+        }
+    },
+    computed: {
+        counter() {
+            return this.$store.getters.getCounter;
         }
     }
 }
